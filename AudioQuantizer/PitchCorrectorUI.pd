@@ -1,0 +1,29 @@
+#N canvas 719 334 1025 453 10;
+#X dropdown 221 210 11 1 0 0 - - -, f 11;
+#X obj 100 85 loadbang;
+#X msg 21 154 names chromatic major minor;
+#X dropdown 321 211 7 1 0 0 - - -, f 7;
+#X text 224 191 SCALE;
+#X text 331 190 Key;
+#X msg 280 112 names A A# B C C# D D# E F F# G G#;
+#X obj 251 289 PitchCorrectorWav;
+#X obj 406 153 bng 105 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 405 134 Select Sound File;
+#X obj 251 332 *~ 0, f 5;
+#X obj 405 275 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 212 399 dac~;
+#X connect 0 0 7 0;
+#X connect 1 0 2 0;
+#X connect 1 0 6 0;
+#X connect 1 0 0 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 7 1;
+#X connect 6 0 3 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 2;
+#X connect 10 0 12 0;
+#X connect 10 0 12 1;
+#X connect 11 0 10 1;
